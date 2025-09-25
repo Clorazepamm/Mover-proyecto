@@ -1,0 +1,77 @@
+/* Custom styles for attractive design: margins, spacing, legible fonts, coherent colors */
+/* Primary color: #007BFF (blue), Secondary: #28A745 (green) for harmony */
+
+body {
+    font-family: 'Arial', sans-serif; /* Legible typography */
+    line-height: 1.6;
+    color: #333;
+}
+
+.hero-section {
+    background-color: #f8f9fa; /* Light background for spacing */
+    margin-bottom: 2rem;
+}
+
+.product-card {
+    transition: transform 0.2s; /* Subtle hover effect for attractiveness */
+    margin-bottom: 1rem;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    height: 200px; /* Consistent image sizing */
+    object-fit: cover;
+}
+
+.custom-order-btn {
+    border-radius: 50%; /* Circular shape */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    top: 80px; /* Adjusted below navbar to avoid overlap and central obstruction */
+    right: 20px;
+    z-index: 1000;
+    position: fixed;
+}
+
+/* Responsive adjustments (Bootstrap handles most, but custom for fine-tuning) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem; /* Smaller on mobile for readability */
+    }
+    
+    .product-card {
+        margin-bottom: 1.5rem; /* Extra spacing on small screens */
+    }
+
+    .custom-order-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px; /* Slightly smaller on mobile */
+        top: 70px; /* Adjusted for mobile navbar height to avoid obstruction */
+        right: 10px;
+    }
+}
+
+/* Footer styling for usefulness */
+footer {
+    margin-top: auto;
+}
+
+/* Ensure coherent palette: no strong colors */
+.btn-primary {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.btn-success {
+    background-color: #28A745;
+    border-color: #28A745;
+}

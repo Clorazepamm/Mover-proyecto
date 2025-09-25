@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Basic structure as per rubric -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mover - Venta de Publicidad: Letreros, Pendones, Adhesivos y Stickers</title>
+    <!-- Bootstrap CSS for responsiveness -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS link (in /css folder) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Menu (bonus: menú de navegación) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mover</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Top-right circular custom order button (opens modal) with "PP" - Moved outside hero for fixed positioning -->
+    <button class="btn btn-success custom-order-btn" data-bs-toggle="modal" data-bs-target="#customOrderModal">
+        PP
+    </button>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center py-5 bg-light">
+        <div class="container">
+            ,<img src="Imagenes/Mover.jpg" alt="">
+            <h1 class="display-4">Bienvenido a Mover</h1>
+            <p class="lead">Especialistas en letreros, pendones, adhesivos y stickers para tu publicidad.</p>
+        </div>
+    </header>
+
+    <!-- Catalog Section (responsive grid with stock products) -->
+    <section id="catalogo" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Catálogo de Productos en Stock</h2>
+            <p class="text-center">Elige de nuestro catálogo y realiza pedidos rápidos. Todos los productos son de alta calidad.</p>
+            <div class="row">
+                <!-- Letreros/Signs -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card product-card">
+                        <img src="Imagenes/Madera.jpg" class="card-img-top" alt="Letrero publicitario en stock">
+                        <div class="card-body">
+                            <h5 class="card-title">Letrero Estándar (1x2m)</h5>
+                            <p class="card-text">Letrero luminoso para exteriores. Precio: $50.</p>
+                            <a href="#contacto" class="btn btn-primary">Pedir Ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pendones/Banners -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card product-card">
+                        <img src="Imagenes/Alto.jpg" class="card-img-top" alt="Pendon publicitario en stock">
+                        <div class="card-body">
+                            <h5 class="card-title">Pendon Vinilo (3x1m)</h5>
+                            <p class="card-text">Banner resistente al viento. Precio: $30.</p>
+                            <a href="#contacto" class="btn btn-primary">Pedir Ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Adhesivos/Adhesives -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card product-card">
+                        <img src="Imagenes/361.jpg" class="card-img-top" alt="Adhesivo publicitario en stock">
+                        <div class="card-body">
+                            <h5 class="card-title">Adhesivo Vinílico (50x70cm)</h5>
+                            <p class="card-text">Pegatinas duraderas para vidrios. Precio: $10.</p>
+                            <a href="#contacto" class="btn btn-primary">Pedir Ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stickers -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card product-card">
+                        <img src="Imagenes/Stikers.jpg" class="card-img-top" alt="Sticker publicitario en stock">
+                        <div class="card-body">
+                            <h5 class="card-title">Sticker Personalizable (10x10cm)</h5>
+                            <p class="card-text">Stickers en rollo para eventos. Precio: $5/unidad.</p>
+                            <a href="#contacto" class="btn btn-primary">Pedir Ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (bonus: footer con información útil) -->
+    <footer id="contacto" class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Mover</h5>
+                    <p>Tu socio en publicidad visual. Tel: +56 9 5030 8155 | Email: mmoracastro@mover.com</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 Mover. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Order Modal (bonus: uso de modales, formulario de contacto funcional) -->
+    <div class="modal fade" id="customOrderModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pedido Personalizado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="customForm">
+                        <div class="mb-3">
+                            <label for="producto" class="form-label">Tipo de Producto</label>
+                            <select class="form-select" id="producto" required>
+                                <option value="">Selecciona...</option>
+                                <option value="letrero">Letrero</option>
+                                <option value="pendon">Pendon</option>
+                                <option value="adhesivo">Adhesivo</option>
+                                <option value="sticker">Sticker</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="especificaciones" class="form-label">Especificaciones (tamaño, material, diseño)</label>
+                            <textarea class="form-control" id="especificaciones" rows="4" placeholder="Ej: Letrero de 2x3m en aluminio con logo en rojo" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cantidad" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control" id="cantidad" min="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Tu Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Enviar Pedido</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS for modals and responsiveness -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS link (in /js folder) for additional functionality -->
+    <script src="js/script.js"></script>
+</body>
+</html>
